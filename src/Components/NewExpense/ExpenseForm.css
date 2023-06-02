@@ -24,3 +24,9 @@
   .new-expense__actions {
     text-align: right;
   }
+  .new-expense__add{
+    text-align: center;
+  }
+  .cancelButton{
+    text-align: right;
+  }
