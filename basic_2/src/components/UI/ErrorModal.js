@@ -1,13 +1,15 @@
-import React, {Fragment} from 'react';
-
-import Card from './Card';
-import Button from './Button';
-import classes from './ErrorModal.module.css';
+import React, { Fragment } from "react";
+import ReactDom from "react-dom";
+import Card from "./Card";
+import Button from "./Button";
+import classes from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
-  return (
-    <Fragment>
-      <div className={classes.backdrop} onClick={props.onConfirm} />
+  const Backdrop = (props) => {
+    return <div className={classes.backdrop} onClick={props.onConfirm} />;
+  };
+  const ModalOVerlay = (props) => {
+    return (
       <Card className={classes.modal}>
         <header className={classes.header}>
           <h2>{props.title}</h2>
@@ -19,6 +21,22 @@ const ErrorModal = (props) => {
           <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </Card>
+    );
+  };
+  return (
+    <Fragment>
+      {ReactDom.createPortal(
+        <Backdrop onConfirm={props.onConfirm} />,
+        document.getElementById("backdrop-root")
+      )}
+      {ReactDom.createPortal(
+        <ModalOVerlay
+          title={props.title}
+          message={props.message}
+          onConfirm={props.onConfirm}
+        />,
+        document.getElementById("modal-root")
+      )}
     </Fragment>
   );
 };
