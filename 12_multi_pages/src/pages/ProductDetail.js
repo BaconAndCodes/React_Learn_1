@@ -6,7 +6,7 @@ const ProductDetailPage = () => {
       <h1>Product Detail</h1>
       <p>{params.productId}</p>
       <p>
-        <Link to="..">Back</Link>
+        <Link to=".." relative="path">Back</Link>
       </p>
     </>
   );
