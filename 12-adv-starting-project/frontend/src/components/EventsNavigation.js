@@ -1,15 +1,15 @@
-import classes from './EventsNavigation.module.css';
-
+import classes from "./EventsNavigation.module.css";
+import { Link } from "react-router-dom";
 function EventsNavigation() {
   return (
     <header className={classes.header}>
       <nav>
         <ul className={classes.list}>
           <li>
-            <a href="/events">All Events</a>
+            <a><Link to =''>All Events</Link></a>
           </li>
           <li>
-            <a href="/events/new">New Event</a>
+            <a><Link to='new'>New Event</Link></a>
           </li>
         </ul>
       </nav>
