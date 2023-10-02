@@ -6,30 +6,26 @@ function EventsNavigation() {
       <nav>
         <ul className={classes.list}>
           <li>
-            <a>
-              <NavLink
-                to=""
-                className={({ isActive }) =>
-                  isActive ? classes.active : undefined
-                }
-                end
-              >
-                All Events
-              </NavLink>
-            </a>
+            <NavLink
+              to=""
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              end
+            >
+              All Events
+            </NavLink>
           </li>
           <li>
-            <a>
-              <NavLink
-                to="new"
-                className={({ isActive }) =>
-                  isActive ? classes.active : undefined
-                }
-              >
-                {" "}
-                New Event
-              </NavLink>
-            </a>
+            <NavLink
+              to="new"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              {" "}
+              New Event
+            </NavLink>
           </li>
         </ul>
       </nav>
