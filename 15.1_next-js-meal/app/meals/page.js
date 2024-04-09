@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default MealPage = () => {
+const  MealPage = () => {
   return (
     <main>
       <h1>This is meal page</h1>
@@ -8,4 +8,5 @@ export default MealPage = () => {
     </main>
   );
 };
+export default MealPage;
 
